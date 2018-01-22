@@ -10,7 +10,7 @@
 </head>
 
 <script src="js/calculs.js"></script>
-
+<div class="container">
 <body>
     
     <h1>
@@ -43,7 +43,7 @@
     <div>
             <form action="index.html" onsubmit="return calculHipoteca();">
                 Termini:
-                <input type="date" required="required" name="Termini" id="termini">
+                <input type="range" min="0" max="40" required="required" name="Termini" id="termini">
                 <input type="button" value="Enviar" onclick="calculHipoteca()">
             </form>
             
@@ -51,6 +51,6 @@
     
 </body>
 
-
+</div>
 
 </html>
