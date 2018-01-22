@@ -27,26 +27,26 @@
     <div>
         <form action="index.html">
             Capital:
-            <input type="number" required="required" min="1" max="10000000" name="Capital" id="capital">
+            <input type="number" required="required" min="1" min= "1" max="10000000" name="Capital" id="capital">
             
         </form>
     </div>
 
     <div>
         <form action="index.html">
-            Interessos:
-            <input type="number" required="required" name="Capital" id="interessos">
+            Interès:
+            <input type="number" step=".01" required="required" name="Capital" id="interes">
             
         </form>
     </div>
 
     <div>
-            <form action="index.html">
+            <form action="index.html" onsubmit="return calculHipoteca();">
                 Termini:
                 <input type="date" required="required" name="Termini" id="termini">
-                
+                <input type="button" value="Enviar" onclick="calculHipoteca()">
             </form>
-            <input type="button" value="Enviar" onclick="calcular()">
+            
         </div>
     
 </body>
