@@ -11,46 +11,47 @@
 
 <script src="js/calculs.js"></script>
 <div class="container">
-<body>
-    
-    <h1>
-        Càlcul de les quotes d'una hipoteca
-    </h1>
-    <div>
-        <form action="index.html">
-            Data d'inici:
-            <input type="date" required="required" name="Data_inici" id="datainici">
-            
-        </form>
-    </div>
-
-    <div>
-        <form action="index.html">
-            Capital:
-            <input type="number" required="required" min="1" min= "1" max="10000000" name="Capital" id="capital">
-            
-        </form>
-    </div>
-
-    <div>
-        <form action="index.html">
-            Interès:
-            <input type="number" step=".01" required="required" name="Capital" id="interes">
-            
-        </form>
-    </div>
-
-    <div>
+    <body>
+        
+        <h1>
+            Càlcul de les quotes d'una hipoteca
+        </h1>
+        <div>
+            <form action="index.html">
+                Data d'inici:
+                <input type="date" required="required" name="Data_inici" id="datainici">
+                
+            </form>
+        </div>
+        
+        <div>
+            <form action="index.html">
+                Capital:
+                <input type="number" required="required" min="1" min= "1" max="10000000" name="Capital" id="capital">
+                
+            </form>
+        </div>
+        
+        <div>
+            <form action="index.html">
+                Interès:
+                <input type="number" step=".01" required="required" name="Capital" id="interes">
+                
+            </form>
+        </div>
+        
+        <div>
             <form action="index.html" onsubmit="return calculHipoteca();">
-                Termini:
-                <input type="range" min="0" max="40" required="required" name="Termini" id="termini">
-                <input type="button" value="Enviar" onclick="calculHipoteca()">
+                Termini (anys):
+                <input type="number" min="0" max="40" required="required" name="Termini (anys)" id="termini">
+                <input type="submit" value="Enviar" onclick="calcul()">
             </form>
             
         </div>
+        
+        
+    </body>
     
-</body>
-
 </div>
 
 </html>
