@@ -5,53 +5,57 @@
     <!-- Enllaç a les llibreries de Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     
+    <!-- Títol de la pàgina -->
     <title>Càlcul quotes hipoteca</title>
     
 </head>
-
+<!-- Enllaç a l'arxiu JavaScript -->
 <script src="js/calculs.js"></script>
 <div class="container">
     <body>
-        
-        <h1>
-            Càlcul de les quotes d'una hipoteca
-        </h1>
-        <div>
-            <form action="index.html">
-                Data d'inici:
+        <!-- Aquí comença el formulari de la pàgina web. El visitant de la pàgina hi introduirà les dades. -->
+        <form action="index.html" onsubmit="return calculHipoteca()">
+            <h1>
+                Càlcul de les quotes d'una hipoteca
+            </h1>
+            <div style="padding:20px;">
+                
+                <p> <strong>Data d'inici:</strong></p>
                 <input type="date" required="required" name="Data_inici" id="datainici">
                 
-            </form>
-        </div>
-        
-        <div>
-            <form action="index.html">
-                Capital:
+            </div>
+            
+            <div style="padding:20px;">
+                <p><strong> Capital: </strong></p>
                 <input type="number" required="required" min="1" min= "1" max="10000000" name="Capital" id="capital">
                 
-            </form>
-        </div>
-        
-        <div>
-            <form action="index.html">
-                Interès:
+            </div>
+            
+            <div style="padding:20px;">
+                <p> <strong>Interès: </strong></p>
                 <input type="number" step=".01" required="required" name="Capital" id="interes">
                 
-            </form>
-        </div>
-        
-        <div>
-            <form action="index.html" onsubmit="return calculHipoteca();">
-                Termini (anys):
+            </div>
+            
+            <div style="padding:20px;">
+                <p><strong> Termini (anys): </strong></p>
                 <input type="number" min="0" max="40" required="required" name="Termini (anys)" id="termini">
-                <input type="submit" value="Enviar" onclick="calcul()">
-            </form>
+                <input type="submit" value="Enviar">
+                <input type="reset">
+                
+                
+            </div>
+            
+        </form>
+        
+        <p><strong>La teva hipoteca:</strong></p>
+        <div id="resultat"; style="padding:30px; background-color:grey;">
+            
             
         </div>
         
-        
-    </body>
+    </div>
     
-</div>
-
+    <!-- Pàgina web realitzada per en David Baños -->
+</body>
 </html>
